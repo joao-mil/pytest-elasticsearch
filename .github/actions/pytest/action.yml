@@ -19,6 +19,10 @@ runs:
     with:
       path: ~/es
       key: es-${{ hashFiles('.install-elasticsearch.sh') }}
+  - name: test run es
+    shell: bash
+    run: |
+      $HOME/es/elasticsearch-8.0/bin/elasticsearch -Vv
   - name: Get pip cache dir
     id: pip-cache
     shell: bash
