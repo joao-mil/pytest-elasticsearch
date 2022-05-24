@@ -118,6 +118,7 @@ def elasticsearch_proc(
             elasticsearch_index_store_type,
             timeout=60,
         )
+        print(elasticsearch_executor.command)
 
         elasticsearch_executor.start()
         yield elasticsearch_executor
