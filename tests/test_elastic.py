@@ -128,6 +128,7 @@ def test_elastic_process(elasticsearch_proc):
 
 def test_elasticsearch(elasticsearch):
     """Test if elasticsearch fixtures connects to process."""
+    print(type(elasticsearch))
     info = elasticsearch.cluster.health()
     assert info["status"] == "green"
 
