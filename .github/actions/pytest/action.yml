@@ -43,6 +43,8 @@ runs:
     - name: Check free RAM
       shell: bash
       run: free -h
+    - name: Debugging with ssh
+      uses: lhotari/action-upterm@v1
     - name: Run test ${{ inputs.elasticsearch }}
       shell: bash
       run: |
