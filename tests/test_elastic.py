@@ -3,7 +3,6 @@ from datetime import datetime
 
 import mock
 import pytest
-import time
 from pytest import FixtureRequest
 from elasticsearch import Elasticsearch
 from pkg_resources import parse_version
@@ -129,7 +128,6 @@ def test_elastic_process(elasticsearch_proc):
 
 def test_elasticsearch(elasticsearch):
     """Test if elasticsearch fixtures connects to process."""
-    time.sleep(1.0)
     info = elasticsearch.cluster.health()
     assert info["status"] == "green"
 
